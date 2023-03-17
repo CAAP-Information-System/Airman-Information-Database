@@ -1,5 +1,5 @@
 @extends('airmens.layout')
-   
+
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -11,7 +11,7 @@
             </div>
         </div>
     </div>
-   
+
     @if ($errors->any())
         <div class="alert alert-danger">
             <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -22,27 +22,27 @@
             </ul>
         </div>
     @endif
-  
+
     <form action="{{ route('airmens.update',$airmen->id) }}" method="POST">
         @csrf
         @method('PUT')
-   
+
          <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>LName:</strong>
+                    <strong>Last Name:</strong>
                     <input type="text" name="lname" value="{{ $airmen->lname }}" class="form-control">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>FName:</strong>
+                    <strong>First name:</strong>
                     <input type="text" name="fname" value="{{ $airmen->fname }}" class="form-control">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>MName:</strong>
+                    <strong>Middle Name:</strong>
                     <input type="text" name="mname" value="{{ $airmen->mname }}" class="form-control">
                 </div>
             </div>
@@ -130,6 +130,6 @@
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </div>
-   
+
     </form>
 @endsection

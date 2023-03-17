@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.add-client-btn{
+    padding: 10px;
+    background-color: #54B435;
+    color: #ffff;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+.btn{
+    margin-top: 5px;
+}
+.btn-form{
+    margin-top: 5px;
+}

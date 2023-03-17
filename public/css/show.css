@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    padding: 3vh;
+}
+.base-user{
+    display: flex;
+    gap: 5vh;
+    align-items: center;
+}
+.uname{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.card-container{
+    padding: 4vh;
+    border-radius: 10px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+
+.card-hdr{
+    font-size: 1.7rem;
+    font-style: italic;
+}
+.tbl{
+    width: 50%;
+}
+.user-cont{
+    font-style: italic;
+}
+label{
+    font-weight: bold;
+}

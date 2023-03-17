@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.create-form{
+    width: 100%;
+}
+
+.submit-btn{
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    color: #ffff;
+    background-color: #04246c;
+
+}
+#inp-field{
+    padding: 3px;
+    border-radius: 10px;
+    border: 1px solid #00235B;
+}
+
+.grp-header{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.name-grp{
+    display: flex;
+    gap: 5vh;
+}
+.name-field{
+    width: 100%;
+}
+
+.address-grp{
+    padding-top: 3vh;
+    display: flex;
+    gap: 5vh;
+}
+.address-grp-2{
+    padding-top: 3vh;
+    display: flex;
+    gap: 5vh;
+}
+.address-field{
+    width: 100%;
+}
+
+.nationality-grp{
+    padding-top: 5vh;
+    display: flex;
+    gap: 5vh;
+}
+.nationality-field{
+    width: 100%;
+}
+
+.identity-grp{
+    padding-top: 5vh;
+    display: flex;
+    gap: 5vh;
+}
+.identity-field{
+    width: 100%;
+}

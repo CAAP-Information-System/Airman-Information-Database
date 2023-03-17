@@ -1,4 +1,15 @@
 @extends('airmens.layout')
+<!--
+    TODO LIST:
+    1. Reconstruct grid layout
+    2. Spacing of contents
+    3. Edit add client button
+    4. Design table
+
+ -->
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url('css/index.css') }}">
+</head>
 
 @section('content')
     <div class="row">
@@ -7,7 +18,7 @@
                 <h2>CAAP Airmen Information</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('airmens.create') }}"> Add Client</a>
+                <a class="add-client-btn" href="{{ route('airmens.create') }}"> Add Client</a>
             </div>
         </div>
     </div>
@@ -18,12 +29,11 @@
         </div>
     @endif
 
-    <table class="table table-bordered">
+    <table class="table">
         <tr>
             <th>No</th>
-            <th>LName</th>
-            <th>FName</th>
-            <th>MName</th>
+            <th>Last Name</th>
+            <th>First Name</th>
             <th>Address</th>
             <th>City</th>
             <th>Province</th>
@@ -47,7 +57,6 @@
                 <td>{{ ++$i }}</td>
                 <td>{{ $airmen->lname }}</td>
                 <td>{{ $airmen->fname }}</td>
-                <td>{{ $airmen->mname }}</td>
                 <td>{{ $airmen->address }}</td>
                 <td>{{ $airmen->city }}</td>
                 <td>{{ $airmen->province }}</td>
@@ -64,9 +73,9 @@
                 <td>{{ $airmen->hair }}</td>
                 <td>{{ $airmen->eyes }}</td> -->
             <td>
-                <form action="{{ route('airmens.destroy',$airmen->id) }}" method="POST">
+                <form class="btn-form" action="{{ route('airmens.destroy',$airmen->id) }}" method="POST">
 
-                    <a class="btn btn-info" href="{{ route('airmens.show',$airmen->id) }}">Show</a>
+                    <a class="btn btn-secondary" href="{{ route('airmens.show',$airmen->id) }}">Show</a>
 
                     <a class="btn btn-primary" href="{{ route('airmens.edit',$airmen->id) }}">Edit</a>
 
