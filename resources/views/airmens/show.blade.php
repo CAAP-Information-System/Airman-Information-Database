@@ -16,7 +16,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2> Show client details</h2>
+            <h2>Personal Information</h2>
         </div>
         <div class="pull-right">
             <a class="btn btn-primary" href="{{ route('airmens.index') }}"> Back</a>
@@ -48,6 +48,9 @@
             <hr>
             <table class="tbl">
                 <tbody>
+                    <th class="section-hdr">
+                        Location
+                    </th>
                     <tr>
                         <td> <label>Address:</label></td>
                         <td>{{ $airmen->address }}</td>
@@ -68,54 +71,47 @@
                         <td><label>Postal Code:</label></td>
                         <td>{{ $airmen->postal }}</td>
                     </tr>
-                    <tr>
-                        <td> <label>Nationality:</label></td>
-                        <td>{{ $airmen->nationality }}</td>
-                    </tr>
+                    <th class="section-hdr">
+                        Contact Information
+                    </th>
                     <tr>
                         <td><label>Mobile Number:</label></td>
                         <td>{{ $airmen->mobile }}</td>
                     </tr>
                     <tr>
-                        <td><label>Phone/Landline Number:</label></td>
+                        <td><label>Telephone Number:</label></td>
                         <td>{{ $airmen->phone }}</td>
+                    </tr>
+                    <th class="section-hdr">
+                        Identity
+                    </th>
+                    <tr>
+                        <td> <label>Nationality:</label></td>
+                        <td>{{ $airmen->nationality }}</td>
                     </tr>
                     <tr>
                         <td><label>Sex:</label></td>
                         <td>{{ $airmen->sex }}</td>
                     </tr>
+                    <tr>
+                        <td><label>Height(cm):</label></td>
+                        <td>{{ $airmen->height }}</td>
+                    </tr>
+                    <tr>
+                        <td><label>Weight(kg):</label></td>
+                        <td>{{ $airmen->weight }}</td>
+                    </tr>
+                    <tr>
+                        <td><label>Hair Color:</label></td>
+                        <td>{{ $airmen->hair }}</td>
+                    </tr>
+                    <tr>
+                        <td><label>Eyes:</label></td>
+                        <td>{{ $airmen->eyes }}</td>
+                    </tr>
                 </tbody>
             </table>
+            <hr>
         </div>
 
-        <div>
-            <div class="form-group">
-                <label>Sex:</label>
-
-            </div>
-        </div>
-        <div>
-            <div class="form-group">
-                <label>Height(cm):</label>
-                {{ $airmen->height }}
-            </div>
-        </div>
-        <div>
-            <div class="form-group">
-                <label>Weight(kg):</label>
-                {{ $airmen->weight }}
-            </div>
-        </div>
-        <div>
-            <div class="form-group">
-                <label>Hair Color:</label>
-                {{ $airmen->hair }}
-            </div>
-        </div>
-        <div>
-            <div class="form-group">
-                <label>Eyes:</label>
-                {{ $airmen->eyes }}
-            </div>
-        </div>
         @endsection

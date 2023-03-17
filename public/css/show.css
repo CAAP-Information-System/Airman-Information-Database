@@ -6,6 +6,7 @@
 .main{
     padding: 3vh;
 }
+
 .base-user{
     display: flex;
     gap: 5vh;
@@ -15,7 +16,6 @@
     font-size: 2rem;
     font-weight: bold;
 }
-
 
 .card-container{
     padding: 4vh;
@@ -34,5 +34,15 @@
     font-style: italic;
 }
 label{
+    font-size: 1rem;
     font-weight: bold;
+}
+.section-hdr{
+    padding-top: 2vh;
+    font-weight: lighter;
+    font-size: 1.3rem;
+}
+
+table td{
+    padding: 7px;
 }
