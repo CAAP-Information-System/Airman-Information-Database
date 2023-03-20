@@ -33,7 +33,7 @@
             </div>
             <div class="id-data">
                 <div class="user-cont">{{ $airmen->company }}</div>
-                <div class="user-cont">{{ $airmen->email }}</div>
+                <div class="">{{ $airmen->email }}</div>
             </div>
         </div>
 

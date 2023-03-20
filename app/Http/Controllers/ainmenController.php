@@ -16,11 +16,11 @@ class ainmenController extends Controller
     public function index(): View
     {
         $airmens = Airmen::latest()->paginate(5);
-        
+
         return view('airmens.index',compact('airmens'))
                     ->with('i', (request()->input('page', 1) - 1) * 5);
     }
-  
+
     /**
      * Show the form for creating a new resource.
      */
@@ -28,7 +28,7 @@ class ainmenController extends Controller
     {
         return view('airmens.create');
     }
-  
+
     /**
      * Store a newly created resource in storage.
      */
@@ -54,13 +54,13 @@ class ainmenController extends Controller
             'hair' => 'required|max:255',
             'eyes' => 'required|max:255',
         ]);
-        
+
         Airmen::create($request->all());
-         
+
         return redirect()->route('airmens.index')
-                        ->with('success','User Data created successfully.');
+                        ->with('User Data created successfully.');
     }
-  
+
     /**
      * Display the specified resource.
      */
@@ -68,7 +68,7 @@ class ainmenController extends Controller
     {
         return view('airmens.show',compact('airmen'));
     }
-  
+
     /**
      * Show the form for editing the specified resource.
      */
@@ -76,7 +76,7 @@ class ainmenController extends Controller
     {
         return view('airmens.edit',compact('airmen'));
     }
-  
+
     /**
      * Update the specified resource in storage.
      */
@@ -102,20 +102,20 @@ class ainmenController extends Controller
             'hair' => 'required|max:255',
             'eyes' => 'required|max:255',
         ]);
-        
+
         $airmen->update($request->all());
-        
+
         return redirect()->route('airmens.index')
-                        ->with('success','User Data updated successfully');
+                        ->with('User Data updated successfully');
     }
-  
+
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(Airmen $airmen): RedirectResponse
     {
         $airmen->delete();
-         
+
         return redirect()->route('airmens.index')
-                        ->with('success','User Data deleted successfully');
+                        ->with('User Data deleted successfully');
     }}
