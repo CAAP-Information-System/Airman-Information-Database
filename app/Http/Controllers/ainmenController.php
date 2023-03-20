@@ -118,4 +118,6 @@ class ainmenController extends Controller
 
         return redirect()->route('airmens.index')
                         ->with('User Data deleted successfully');
-    }}
+    }
+
+}

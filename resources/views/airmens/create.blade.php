@@ -1,10 +1,11 @@
 @extends('airmens.layout')
 <!--
     TODO LIST
-    1. Change form structure
-    2. Design header: change to 'Create client' instead
-    3. Minimize input width
-    4. Categorize form fields
+    ✅  1. Change form structure
+    ✅  2. Design header: change to 'Create client' instead
+    ✅  3. Minimize input width
+    ✅  4. Categorize form fields
+    5. Arrange field containers depending on its category.
 
  -->
 
@@ -39,103 +40,108 @@
         @csrf
 
         <fieldset class="form-field">
-            <table> </table>
+
             <!--  -->
+
             <div class="name-grp">
-                <div class="grp-header">I.</div>
+                <p style="font-style: italic;">Please fill out the required fields <span class="required">*</span></p>
+                <div class="grp-header">I. Applicant' Name</div>
                 <div class="form-group">
-                    <label class="form-lbl">Last Name:</label>
+                    <label class="form-lbl">Last Name:</label><span class="required">*</span>
                     <input id="inp-field" type="text" name="lname" class="name-field">
                 </div>
                 <div class="form-group">
-                    <label class="form-lbl">First Name:</label>
+                    <label class="form-lbl">First Name:</label><span class="required">*</span>
                     <input id="inp-field" type="text" name="fname" class="name-field">
                 </div>
                 <div class="form-group">
-                    <label class="form-lbl">Middle Name:</label>
+                    <label class="form-lbl">Middle Name:</label><span class="required">*</span>
                     <input id="inp-field" type="text" name="mname" class="name-field">
                 </div>
 
             </div>
             <hr>
+
             <div class="address-grp">
-                <div class="grp-header">II.</div>
+                <div class="grp-header">II. Applicant's Address</div>
                 <div class="form-group">
-                    <label class="form-lbl">Address:</label>
+                    <label class="form-lbl">Address:</label><span class="required">*</span>
                     <input id="inp-field" type="text" name="address" class="address-field">
                 </div>
                 <div class="form-group">
-                    <label class="form-lbl">City:</label>
+                    <label class="form-lbl">City:</label><span class="required">*</span>
                     <input id="inp-field" type="text" name="city" class="address-field">
                 </div>
                 <div class="form-group">
-                    <label class="form-lbl">Province:</label>
+                    <label class="form-lbl">Province:</label><span class="required">*</span>
                     <input id="inp-field" type="text" name="province" class="address-field">
                 </div>
 
                 <div class="form-group">
-                    <label class="form-lbl">Postal Code:</label>
+                    <label class="form-lbl">Postal Code:</label><span class="required">*</span>
                     <input id="inp-field" type="text" name="postal" class="address-field">
                 </div>
-            </div>
-            <div class="address-grp-2">
                 <div class="form-group">
-                    <label class="form-lbl">Mobile No.:</label>
+                    <label class="form-lbl">Mobile No.:</label><span class="required">*</span>
                     <input id="inp-field" id="inp-num" type="text" name="mobile" class="address-field">
                 </div>
                 <div class="form-group">
-                    <label class="form-lbl">Phone:</label>
+                    <label class="form-lbl">Phone:</label><span class="required">*</span>
                     <input id="inp-field" id="inp-num" type="text" name="phone" class="address-field">
                 </div>
                 <div class="form-group">
-                    <label class="form-lbl">Company/School:</label>
+                    <label class="form-lbl">Company/School:</label><span class="required">*</span>
                     <input id="inp-field" type="text" name="company" class="address-field">
                 </div>
                 <div class="form-group">
-                    <label class="form-lbl">Email Address:</label>
+                    <label class="form-lbl">Email Address:</label><span class="required">*</span>
                     <input id="inp-field" type="text" name="email" class="address-field">
                 </div>
-
             </div>
             <hr>
 
+
             <div class="nationality-grp">
-                <div class="grp-header">III.</div>
+                <div class="grp-header">III. Applicant's Nationality</div>
                 <div class="form-group">
-                    <label class="form-lbl">Nationality:</label>
+                    <label class="form-lbl">Nationality:</label><span class="required">*</span>
                     <input id="inp-field" type="text" name="nationality" class="nationality-field">
                 </div>
                 <div class="form-group">
-                    <label class="form-lbl">Country:</label>
+                    <label class="form-lbl">Country:</label><span class="required">*</span>
                     <input id="inp-field" type="text" name="country" class="nationality-field">
                 </div>
             </div>
+            <hr>
 
             <div class="identity-grp">
-                <div class="grp-header">IV.</div>
-                <div class="form-group">
-                    <label class="form-lbl">Sex:</label>
-                    <input id="inp-field" type="text" name="sex" class="identity-field">
+                <div class="grp-header">IV. Applican's Identity</div>
+                <div class="form-group-radio">
+                    <label class="form-lbl">Sex:</label><span class="required">*</span>
+                    Male
+                    <input id="inp-field" type="radio" name="sex" class="" value="Male">
+                    Female
+                    <input id="inp-field" type="radio" name="sex" class="" value="Female">
                 </div>
                 <div class="form-group">
-                    <label class="form-lbl">Height(cm):</label>
+                    <label class="form-lbl">Height(cm):</label><span class="required">*</span>
                     <input id="inp-field" type="text" name="height" class="identity-field">
                 </div>
                 <div class="form-group">
-                    <label class="form-lbl">Weight(kg):</label>
+                    <label class="form-lbl">Weight(kg):</label><span class="required">*</span>
                     <input id="inp-field" type="text" name="weight" class="identity-field">
                 </div>
                 <div class="form-group">
-                    <label class="form-lbl">Hair Color:</label>
+                    <label class="form-lbl">Hair Color:</label><span class="required">*</span>
                     <input id="inp-field" type="text" name="hair" class="identity-field">
                 </div>
                 <div class="form-group">
-                    <label class="form-lbl">Eyes:</label>
+                    <label class="form-lbl">Eyes:</label><span class="required">*</span>
                     <input id="inp-field" type="text" name="eyes" class="identity-field">
                 </div>
             </div>
 
-            <div class=" text-center">
+            <div class="submit">
                 <button class="submit-btn" type="submit">Submit</button>
             </div>
         </fieldset>

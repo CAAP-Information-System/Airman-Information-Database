@@ -3,8 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.add-client-btn{
+.main{
+    padding: 5px;
+}
+/* .add-client-btn{
     padding: 10px;
     background-color: #54B435;
     color: #ffff;
@@ -13,14 +15,19 @@
     cursor: pointer;
     margin-top: 3vh;
 
-}
+} */
 
 .tbl{
     padding-top: 3vh;
 }
+.table{
+    padding-top: 3vh
+}
+.table td{
+    text-transform: uppercase;
+}
 .btn{
     margin-top: 5px;
 }
-.btn-form{
-    margin-top: 5px;
-}
+
+
