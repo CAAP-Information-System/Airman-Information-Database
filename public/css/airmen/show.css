@@ -20,9 +20,10 @@
     font-size: 2rem;
     font-weight: bold;
 }
-
-.card-grp {
+.transaction-btn{
+    padding: 5vh;
 }
+
 
 .card-container-details {
     padding: 4vh;
@@ -63,7 +64,7 @@ table td {
     width: 100%;
 }
 .card-lcd {
-    padding: 5  vh;
+    padding: 5vh;
     border-top: 10px solid #00235B;
     border-radius: 10px;
     background-color: #F5F5F5;

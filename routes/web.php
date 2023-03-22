@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ainmenController;
+use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\EndorsingOfficerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,3 +17,7 @@ use App\Http\Controllers\ainmenController;
 */
 
 Route::resource('airmens', ainmenController::class);
+Route::get('/search/', 'ainmenController@search')->name('search');
+
+Route::resource('transactions', TransactionController::class);
+Route::resource('officers', EndorsingOfficerController::class);

@@ -8,7 +8,7 @@
  -->
 
 <head>
-    <link rel="stylesheet" type="text/css" href="{{ url('css/show.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('css/airmen/show.css') }}">
 </head>
 @section('content')
 
@@ -16,7 +16,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Personal Information</h2>
+            <h2>Airman Information</h2>
         </div>
         <div class="pull-right">
             <a class="btn btn-primary" href="{{ route('airmens.index') }}"> Back</a>
@@ -41,6 +41,10 @@
             </div>
         </div>
 
+
+    </div>
+    <div class="transaction-btn">
+        <a  class="btn btn-success" href="{{ route('transactions.index') }}">Create Transaction</a>
     </div>
 
     <div class="row">

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Airman Information</title>
+    <title>Create Transaction</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ url('css/airmen/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="">
 </head>
 <!-- <header class="header-sect">
     <img class="logo" src="./img/caap logo.png" alt="">

@@ -10,7 +10,7 @@
  -->
 
 <head>
-    <link rel="stylesheet" type="text/css" href="{{ url('css/create.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('css/airmen/create.css') }}">
 </head>
 @section('content')
 <div class="row">

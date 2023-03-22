@@ -4,21 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Models\Airmen;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
 
 class ainmenController extends Controller
 {
-/**
+    /**
      * Display a listing of the resource.
      */
     public function index(): View
     {
         $airmens = Airmen::latest()->paginate(5);
 
-        return view('airmens.index',compact('airmens'))
-                    ->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('airmens.index', compact('airmens'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -58,7 +59,7 @@ class ainmenController extends Controller
         Airmen::create($request->all());
 
         return redirect()->route('airmens.index')
-                        ->with('User Data created successfully.');
+            ->with('User Data created successfully.');
     }
 
     /**
@@ -66,7 +67,7 @@ class ainmenController extends Controller
      */
     public function show(Airmen $airmen): View
     {
-        return view('airmens.show',compact('airmen'));
+        return view('airmens.show', compact('airmen'));
     }
 
     /**
@@ -74,7 +75,7 @@ class ainmenController extends Controller
      */
     public function edit(Airmen $airmen): View
     {
-        return view('airmens.edit',compact('airmen'));
+        return view('airmens.edit', compact('airmen'));
     }
 
     /**
@@ -106,7 +107,7 @@ class ainmenController extends Controller
         $airmen->update($request->all());
 
         return redirect()->route('airmens.index')
-                        ->with('User Data updated successfully');
+            ->with('User Data updated successfully');
     }
 
     /**
@@ -117,7 +118,21 @@ class ainmenController extends Controller
         $airmen->delete();
 
         return redirect()->route('airmens.index')
-                        ->with('User Data deleted successfully');
+            ->with('User Data deleted successfully');
+    }
+
+    public function search(Request $request){
+        // Get the search value from the request
+        $search = $request->input('search');
+
+        // Search in the title and body columns from the posts table
+        $posts = Airmen::query()
+            ->where('lname', 'LIKE', "%{$search}%")
+            ->orWhere('sex', 'LIKE', "%{$search}%")
+            ->get();
+
+        // Return the search view with the results compacted
+        return view('search', compact('airmen'));
     }
 
 }

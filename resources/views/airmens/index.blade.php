@@ -2,14 +2,15 @@
 <!--
     TODO LIST:
     1. Reconstruct grid layout
-    2. Spacing of contents
-    3. Edit add client button
+    ✅  2. Spacing of contents
+    ✅  3. Edit add client button
     4. Design table
+    5. Create search function
 
  -->
 
 <head>
-    <link rel="stylesheet" type="text/css" href="{{ url('css/index.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('css/airmen/index.css') }}">
 </head>
 
 @section('content')
@@ -23,7 +24,10 @@
         <p>{{ $message }}</p>
     </div>
     @endif
-
+    <!-- <form action="{{ route('airmens.index') }}" method="GET">
+        <input type="text" name="search" required />
+        <button type="submit">Search</button>
+    </form> -->
     <table class="table">
         <tr>
             <th>PEL No</th>
@@ -82,6 +86,7 @@
         @endforeach
         @endisset
     </table>
+
 </div>
 
 
